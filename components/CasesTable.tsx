@@ -89,19 +89,20 @@ export function CasesTable({ getStatusColor }: CasesTableProps) {
       >
         <Group>
           <Title order={4}>All Cases</Title>
-          <Button leftSection={<Plus size={16} />} variant="outline" size="compact-sm">
+          <Button disabled leftSection={<Plus size={16} />} variant="outline" size="compact-sm">
             Create
           </Button>
         </Group>
-        <Group>
+        <Group style={{ flexWrap: 'nowrap' }} gap="sm">
           <TextInput
             placeholder="Search cases..."
             leftSection={<Search size={16} />}
             value={searchQuery}
             onChange={e => setSearchQuery(e.currentTarget.value)}
-            style={{ width: '300px' }}
+            flex={1}
+            maw={300}
           />
-          <ActionIcon variant="light" size="lg">
+          <ActionIcon variant="light" size="lg" disabled>
             <Filter size={20} />
           </ActionIcon>
         </Group>

@@ -9,9 +9,11 @@ export function Header() {
 
   return (
     <Flex h="100%" justify="space-between" align="center" px="md">
-       <Title order={3} style={{fontFamily: 'var(--font-poppins)'}}>Kasy</Title>
+      <Title order={3} style={{ fontFamily: 'var(--font-poppins)' }}>
+        Kasy
+      </Title>
 
-      <ActionIcon variant='light' size='lg'>
+      <ActionIcon variant="light" size="lg" disabled>
         <User size={20} />
       </ActionIcon>
     </Flex>

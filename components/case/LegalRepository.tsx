@@ -274,7 +274,7 @@ export function LegalRepository() {
 
   return (
     <>
-      <Container mb="sm">
+      <Container mb="sm" mt="md">
         <Group justify="space-between" wrap="nowrap" mb="xl">
           <Menu position="bottom-start">
             <Menu.Target>
