@@ -1,0 +1,10 @@
+/* Remove Tailwind imports and keep only necessary global styles */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}

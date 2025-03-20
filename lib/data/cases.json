@@ -1,0 +1,184 @@
+{
+  "cases": [
+    {
+      "id": "1",
+      "uid": "case-1",
+      "name": "Smith vs. Johnson Corp",
+      "client": "Smith Family",
+      "status": "Active",
+      "lastUpdated": "2025-03-20T09:30:00Z",
+      "createdAt": "2025-01-15T08:00:00Z"
+    },
+    {
+      "id": "2",
+      "uid": "case-2",
+      "name": "Environmental Protection Case",
+      "client": "Green Earth NGO",
+      "status": "Pending",
+      "lastUpdated": "2025-03-19T16:45:00Z",
+      "createdAt": "2025-02-01T09:15:00Z"
+    },
+    {
+      "id": "3",
+      "uid": "case-3",
+      "name": "Patent Dispute 2024-01",
+      "client": "Tech Innovations Inc",
+      "status": "Review",
+      "lastUpdated": "2025-03-20T08:20:00Z",
+      "createdAt": "2025-03-01T11:30:00Z"
+    },
+    {
+      "id": "4",
+      "uid": "case-4",
+      "name": "Property Dispute Resolution",
+      "client": "Thompson Estate",
+      "status": "Active",
+      "lastUpdated": "2025-03-19T15:10:00Z",
+      "createdAt": "2025-02-15T13:45:00Z"
+    },
+    {
+      "id": "5",
+      "uid": "case-5",
+      "name": "Corporate Restructuring",
+      "client": "Tech Innovations Inc",
+      "status": "Pending",
+      "lastUpdated": "2025-03-20T07:30:00Z",
+      "createdAt": "2025-01-20T10:00:00Z"
+    },
+    {
+      "id": "6",
+      "uid": "case-6",
+      "name": "Intellectual Property Rights",
+      "client": "Creative Studios Ltd",
+      "status": "Review",
+      "lastUpdated": "2025-03-19T14:20:00Z",
+      "createdAt": "2025-02-10T14:30:00Z"
+    },
+    {
+      "id": "7",
+      "uid": "case-7",
+      "name": "Employment Discrimination",
+      "client": "Workers United",
+      "status": "Active",
+      "lastUpdated": "2025-03-20T06:45:00Z",
+      "createdAt": "2025-01-25T09:15:00Z"
+    },
+    {
+      "id": "8",
+      "uid": "case-8",
+      "name": "Medical Malpractice Suit",
+      "client": "Johnson Family",
+      "status": "Pending",
+      "lastUpdated": "2025-03-19T13:15:00Z",
+      "createdAt": "2025-02-05T15:45:00Z"
+    },
+    {
+      "id": "9",
+      "uid": "case-9",
+      "name": "Contract Breach Resolution",
+      "client": "Global Trading Co",
+      "status": "Review",
+      "lastUpdated": "2025-03-20T05:30:00Z",
+      "createdAt": "2025-01-30T11:20:00Z"
+    },
+    {
+      "id": "10",
+      "uid": "case-10",
+      "name": "Real Estate Development Dispute",
+      "client": "City Properties LLC",
+      "status": "Active",
+      "lastUpdated": "2025-03-19T12:20:00Z",
+      "createdAt": "2025-02-20T13:10:00Z"
+    },
+    {
+      "id": "11",
+      "uid": "case-11",
+      "name": "Insurance Claim Appeal",
+      "client": "Brown Family",
+      "status": "Pending",
+      "lastUpdated": "2025-03-20T04:45:00Z",
+      "createdAt": "2025-01-18T10:30:00Z"
+    },
+    {
+      "id": "12",
+      "uid": "case-12",
+      "name": "Trademark Infringement",
+      "client": "Fashion Forward Inc",
+      "status": "Review",
+      "lastUpdated": "2025-03-19T11:30:00Z",
+      "createdAt": "2025-02-25T14:15:00Z"
+    },
+    {
+      "id": "13",
+      "uid": "case-13",
+      "name": "Consumer Protection Class Action",
+      "client": "Consumer Rights Group",
+      "status": "Active",
+      "lastUpdated": "2025-03-20T03:15:00Z",
+      "createdAt": "2025-01-22T09:45:00Z"
+    },
+    {
+      "id": "14",
+      "uid": "case-14",
+      "name": "Construction Defect Litigation",
+      "client": "Homeowners Association",
+      "status": "Pending",
+      "lastUpdated": "2025-03-19T10:45:00Z",
+      "createdAt": "2025-02-12T11:30:00Z"
+    },
+    {
+      "id": "15",
+      "uid": "case-15",
+      "name": "Family Trust Dispute",
+      "client": "Wilson Estate",
+      "status": "Review",
+      "lastUpdated": "2025-03-20T02:20:00Z",
+      "createdAt": "2025-01-28T15:45:00Z"
+    },
+    {
+      "id": "16",
+      "uid": "case-16",
+      "name": "Environmental Compliance",
+      "client": "Clean Energy Corp",
+      "status": "Active",
+      "lastUpdated": "2025-03-19T09:45:00Z",
+      "createdAt": "2025-02-08T10:15:00Z"
+    },
+    {
+      "id": "17",
+      "uid": "case-17",
+      "name": "Securities Fraud Investigation",
+      "client": "Investor Protection Group",
+      "status": "Pending",
+      "lastUpdated": "2025-03-20T01:15:00Z",
+      "createdAt": "2025-01-16T13:30:00Z"
+    },
+    {
+      "id": "18",
+      "uid": "case-18",
+      "name": "Product Liability Suit",
+      "client": "Consumer Safety Alliance",
+      "status": "Review",
+      "lastUpdated": "2025-03-19T08:45:00Z",
+      "createdAt": "2025-02-18T14:45:00Z"
+    },
+    {
+      "id": "19",
+      "uid": "case-19",
+      "name": "Maritime Law Dispute",
+      "client": "Ocean Shipping Ltd",
+      "status": "Active",
+      "lastUpdated": "2025-03-20T00:15:00Z",
+      "createdAt": "2025-01-24T11:15:00Z"
+    },
+    {
+      "id": "20",
+      "uid": "case-20",
+      "name": "International Trade Compliance",
+      "client": "Global Imports Co",
+      "status": "Pending",
+      "lastUpdated": "2025-03-19T07:30:00Z",
+      "createdAt": "2025-02-03T09:30:00Z"
+    }
+  ]
+}
