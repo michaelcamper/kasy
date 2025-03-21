@@ -41,7 +41,7 @@ export function CaseSummary({ caseId }: CaseSummaryProps) {
       <Tooltip label="Total documents in the case">
         <Paper
           withBorder
-          style={{ flex: 1, cursor: 'pointer' }}
+          style={{ flex: 1, cursor: 'pointer', color: 'initial' }}
           radius="md"
           component={Link}
           href={`/case/${caseId}/library`}
