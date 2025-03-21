@@ -142,7 +142,7 @@ export function CasesTable({ getStatusColor }: CasesTableProps) {
                     <CaseStatus status={c.status} readonly />
                   </Table.Td>
                   <Table.Td>{dayjs(c.lastUpdated).fromNow()}</Table.Td>
-                  <Table.Td visibleFrom="sm">{dayjs(c.createdAt).format('DD.MM.YY')}</Table.Td>
+                  <Table.Td visibleFrom="sm">{dayjs(c.createdAt).format('DD.MM.YYYY')}</Table.Td>
                   <Table.Td>
                     <Button variant="light" size="xs" component={Link} href={`/case/${c.id}`}>
                       View

@@ -15,7 +15,7 @@ export const fetchRecentCases = async (): Promise<Case[]> => {
     .slice(0, 3);
 };
 
-export const fetchCaseById = async (id: string): Promise<Case | null> => {
+export const fetchCaseById = (id: string): Case | null => {
   const foundCase = casesData.cases.find(c => c.id === id);
   return foundCase || null;
 };

@@ -1,5 +1,9 @@
 'use client';
 
+import { MantineThemeVariables } from '@mantine/core';
+
+const getCssVar = (variable: MantineThemeVariables) => `var(${variable})`;
+
 import {
   Paper,
   Group,
@@ -50,6 +54,8 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import Image from 'next/image';
+import dayjs from 'dayjs';
+
 interface Document {
   id: string;
   title: string;
@@ -230,7 +236,7 @@ export function LegalRepository() {
       <Group gap="sm" my="sm" justify="space-between">
         <Badge>{doc.type}</Badge>
         <Text c="dimmed" size="sm">
-          {new Date(doc.date).toLocaleDateString()}
+          {dayjs(doc.date).format('DD.MM.YYYY')}
         </Text>
       </Group>
 
@@ -364,7 +370,7 @@ export function LegalRepository() {
                 style={{ cursor: 'pointer' }}
                 onClick={() => setDateRange(current => ({ ...current, from: null }))}
               >
-                After {dateRange.from.toLocaleDateString()}
+                After {dayjs(dateRange.from).format('DD.MM.YYYY')}
               </Badge>
             )}
             {dateRange.to && (
@@ -376,7 +382,7 @@ export function LegalRepository() {
                 style={{ cursor: 'pointer' }}
                 onClick={() => setDateRange(current => ({ ...current, to: null }))}
               >
-                Before {dateRange.to.toLocaleDateString()}
+                Before {dayjs(dateRange.to).format('DD.MM.YYYY')}
               </Badge>
             )}
 
@@ -433,7 +439,7 @@ export function LegalRepository() {
                     <Group gap="sm" mb="xs">
                       <Badge>{doc.type}</Badge>
                       <Text c="dimmed" size="sm">
-                        {new Date(doc.date).toLocaleDateString()}
+                        {dayjs(doc.date).format('DD.MM.YYYY')}
                       </Text>
                     </Group>
                     <Text fw={500}>{doc.title}</Text>

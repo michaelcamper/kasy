@@ -1,24 +1,13 @@
 'use client';
 
-import {
-  AppShell,
-  Group,
-  Title,
-  SegmentedControl,
-  ActionIcon,
-  Container,
-  LoadingOverlay,
-  Button,
-} from '@mantine/core';
-import { ChevronLeft, Sparkles, MessageCircle, X, Bot } from 'lucide-react';
+import { ActionIcon, AppShell, Group, SegmentedControl, Title } from '@mantine/core';
+import { redirect, RedirectType, useSelectedLayoutSegment } from 'next/navigation';
 import Link from 'next/link';
-import { useSelectedLayoutSegment } from 'next/navigation';
-import { CaseStatus } from '@/components/case/CaseStatus';
-import { useEffect, useState } from 'react';
-import { Case } from '@/types/case';
 import { fetchCaseById } from '@/lib/data/handlers';
 import { Chat } from '@/components/Chat';
 import { useDisclosure } from '@mantine/hooks';
+import { ChevronLeft, Sparkles } from 'lucide-react';
+import { CaseStatus } from '@/components/case/CaseStatus';
 
 export default function CaseLayout({
   children,
@@ -28,35 +17,12 @@ export default function CaseLayout({
   children: React.ReactNode;
 }) {
   const segment = useSelectedLayoutSegment();
-  const [caseData, setCaseData] = useState<Case | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [chatOpen, { toggle, close }] = useDisclosure(false);
+  const [chatOpen, { toggle }] = useDisclosure(false);
 
-  useEffect(() => {
-    const loadCase = async () => {
-      try {
-        const data = await fetchCaseById(params.caseId);
-        setCaseData(data);
-      } catch (error) {
-        console.error('Error loading case:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadCase();
-  }, [params.caseId]);
-
-  if (loading) {
-    return (
-      <div style={{ position: 'relative', minHeight: '100vh' }}>
-        <LoadingOverlay visible={true} zIndex={1000} overlayProps={{ radius: 'sm', blur: 2 }} />
-      </div>
-    );
-  }
+  const caseData = fetchCaseById(params.caseId);
 
   if (!caseData) {
-    return null; // Next.js will show the not-found page
+    return redirect('/', RedirectType.replace);
   }
 
   return (
@@ -67,7 +33,6 @@ export default function CaseLayout({
         breakpoint: 'sm',
         collapsed: {
           desktop: !chatOpen,
-          mobile: !chatOpen,
         },
       }}
       padding="md"
@@ -83,20 +48,36 @@ export default function CaseLayout({
               <CaseStatus status={caseData.status} readonly />
             </Group>
           </Group>
-
           <Group>
             <SegmentedControl
               color="blue"
               value={segment || ''}
+              styles={{
+                label: {
+                  padding: 0,
+                },
+              }}
               data={[
                 { label: 'Research', value: '' },
                 { label: 'Notes', value: 'notes' },
                 { label: 'Library', value: 'library' },
                 { label: 'Settings', value: 'config' },
-              ]}
-              onChange={value => {
-                window.location.href = `/case/${params.caseId}${value ? `/${value}` : ''}`;
-              }}
+              ].map(item => ({
+                ...item,
+                label: (
+                  <Link
+                    href={`/case/${params.caseId}/${item.value}`}
+                    style={{
+                      color: 'inherit',
+                      display: 'block',
+                      padding: '5px 10px',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                ),
+              }))}
             />
             <ActionIcon variant="light" size="lg" onClick={toggle}>
               <Sparkles size={20} />
