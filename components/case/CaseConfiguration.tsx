@@ -33,9 +33,9 @@ import { useState } from 'react';
 
 export function CaseConfiguration() {
   return (
-    <Container size="md" mt="xl">
+    <Container size="md" mt="md">
       <Tabs defaultValue="details" variant="pills" orientation="vertical">
-        <Paper style={{ alignSelf: 'flex-start' }}>
+        <Paper style={{ alignSelf: 'flex-start' }} bg="gray.0">
           <Tabs.List>
             {[
               { label: 'Details', icon: File, value: 'details' },

@@ -43,8 +43,10 @@ export default function CaseLayout({
             <ActionIcon variant="subtle" size="lg" component={Link} href="/">
               <ChevronLeft size={24} />
             </ActionIcon>
-            <Group gap="xs" wrap="nowrap">
-              <Title order={3}>{caseData.name}</Title>
+            <Group gap="sm" wrap="nowrap">
+              <Title order={3} fw={500}>
+                {caseData.name}
+              </Title>
               <CaseStatus status={caseData.status} readonly />
             </Group>
           </Group>
@@ -72,6 +74,8 @@ export default function CaseLayout({
                       display: 'block',
                       padding: '5px 10px',
                       textDecoration: 'none',
+                      letterSpacing: '0.05em',
+                      fontWeight: 500,
                     }}
                   >
                     {item.label}
