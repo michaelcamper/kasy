@@ -1,9 +1,5 @@
 'use client';
 
-import { MantineThemeVariables } from '@mantine/core';
-
-const getCssVar = (variable: MantineThemeVariables) => `var(${variable})`;
-
 import {
   Paper,
   Group,
